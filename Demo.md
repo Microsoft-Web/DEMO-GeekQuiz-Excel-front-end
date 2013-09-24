@@ -51,20 +51,102 @@ Follow these steps to setup your environment for the demo.
 ## Demo ##
 This demo is composed of the following segments:
 
-1. [(TODO: Insert Segment 1 title here)](#segment1).
+1. [Create the StatisticsController](#segment1).
 1. [(TODO: Insert Segment 2 title here)](#segment2).
 
 <a name="segment1" />
-### (TODO: Insert Segment 1 title here) ###
+### Create the StatisticsController ###
 
-1. STEP
+1. Right click on the **Controllers** folder and go to **Add/Controller...** in order to create a new **StatisticsController**.
 
-	![TODO](images/TODO.png?raw=true "TODO")
+	![Creating a new Controller](images/creating-a-new-controller.png?raw=true "Creating a new Controller")
 
-	_TODO_
+	_Creating a new Controller_
+
+1. In the **Add Scaffold** dialog select the **Web API 2 Controller - Empty** option from the list and click **Ok**
+
+	![Selecting the Web API 2 Controller - Empty option](images/selecting-the-web-api-controller-scaffold.png?raw=true "Selecting the Web API 2 Controller - Empty option")
+
+	_Selecting the Web API 2 Controller - Empty option_
+
+1. In the **Add Controller** dialog, set the Controller name to **StatisticsController**.
+
+	![Setting the name to the StatisticsController](images/setting-the-name-to-the-statisticscontroller.png?raw=true "Setting the name to the StatisticsController")
+
+	_Setting the name to the StatisticsController_
+
+1. Implement the controller using the following code.
+
+	<!-- mark:3-16 -->
+	````C#
+    public class StatisticsController : ApiController
+    {
+        private TriviaContext db;
+        private StatisticsService statisticsService;
+
+        public StatisticsController()
+        {
+            this.db = new TriviaContext();
+            this.statisticsService = new StatisticsService(db);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            this.db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+````
+
+1. Add the following using statements.
+
+	<!-- mark:1-2 -->
+	````C#
+	using GeekQuiz.Models;
+	using GeekQuiz.Services;
+````
+
+1. Add the following code to create a **Get** action in the **StatisticsController**.
+
+	<!-- mark:1-14 -->
+	````C#
+	public async Task<StatisticsViewModel> Get()
+	{
+		StatisticsViewModel statistics =
+			 await this.statisticsService.GenerateStatistics();
+
+		return statistics;
+	}
+````
+
+1. Resolve the missing _using_ statements for **Task** and **StatisticsViewModel**.
+
+	<!-- mark:1-2 -->
+	````C#
+	using GeekQuiz.ViewModels;
+	using System.Threading.Tasks;
+````
+
+
+1. Build the solution.
+
 
 <a name="segment2" />
-### (TODO: Insert Segment 2 title here) ###
+### Creating an Excel Task bar application ###
+
+1. TODO: Review and define the best flow to do the following:
+	1. File / New / Office / Excel Task bar application.
+	1. Use snippet to add a call in to the GeekQuiz StatisticsController and puts the results in the Excel document. 
+
+<a name="segment3" />
+### Running the excel app ###
+
+1. TODO: Review and define the best flow to showcase the running solution
+	1. Debug the application with **F5**.
+
+		> **Note:** If the Log in page is displayed, provide the credentials you created during the setup steps.
+		
+		> ![Logging in the site](images/logging-in-the-app.png?raw=true "Logging in the site")
 
 ---
 
