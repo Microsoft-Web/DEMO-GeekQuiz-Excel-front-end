@@ -8,6 +8,7 @@
 This demo demonstrates an Excel app pulls statistics from the GeekQuiz API. 
 
 In this demo you will:
+
 1. Add a new empty Web API StatisticsController to the GeekQuiz application.
 1. Using snippets, add a Get method which calls into StatisticsService.GenerateStatistics(). 
 1. File / New / Office / Excel Task bar application.
