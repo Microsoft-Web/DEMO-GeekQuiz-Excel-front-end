@@ -12,9 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D02D7F
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekQuizStatistics", "GeekQuizStatistics\GeekQuizStatistics.csproj", "{4089006E-01E2-4752-9E66-9126C46A7017}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekQuizStatisticsWeb", "GeekQuizStatisticsWeb\GeekQuizStatisticsWeb.csproj", "{F7B79C09-C970-455A-99C8-F8B8CE7647DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekQuiz.Office", "GeekQuiz.Office\GeekQuiz.Office.csproj", "{69CD6F6B-20AC-48E2-9AD2-43531F526862}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,16 +24,12 @@ Global
 		{97C2F2F6-0E6A-4717-BE70-722245DA076F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C2F2F6-0E6A-4717-BE70-722245DA076F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97C2F2F6-0E6A-4717-BE70-722245DA076F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4089006E-01E2-4752-9E66-9126C46A7017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4089006E-01E2-4752-9E66-9126C46A7017}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4089006E-01E2-4752-9E66-9126C46A7017}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{4089006E-01E2-4752-9E66-9126C46A7017}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4089006E-01E2-4752-9E66-9126C46A7017}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4089006E-01E2-4752-9E66-9126C46A7017}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{F7B79C09-C970-455A-99C8-F8B8CE7647DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7B79C09-C970-455A-99C8-F8B8CE7647DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7B79C09-C970-455A-99C8-F8B8CE7647DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7B79C09-C970-455A-99C8-F8B8CE7647DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69CD6F6B-20AC-48E2-9AD2-43531F526862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69CD6F6B-20AC-48E2-9AD2-43531F526862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69CD6F6B-20AC-48E2-9AD2-43531F526862}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{69CD6F6B-20AC-48E2-9AD2-43531F526862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69CD6F6B-20AC-48E2-9AD2-43531F526862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69CD6F6B-20AC-48E2-9AD2-43531F526862}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

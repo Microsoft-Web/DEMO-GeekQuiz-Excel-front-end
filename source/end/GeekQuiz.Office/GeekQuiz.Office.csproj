@@ -4,21 +4,21 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4089006E-01E2-4752-9E66-9126C46A7017}</ProjectGuid>
+    <ProjectGuid>{69CD6F6B-20AC-48E2-9AD2-43531F526862}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeekQuizStatistics</RootNamespace>
-    <AssemblyName>GeekQuizStatistics</AssemblyName>
+    <RootNamespace>GeekQuiz.Office</RootNamespace>
+    <AssemblyName>GeekQuiz.Office</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
-    <AppFeaturePartId>{b9f13862-c680-45bf-8984-5faef2af7059}</AppFeaturePartId>
-    <WspPartId>{2b1efc16-839d-40d1-a859-a91d298cf7a9}</WspPartId>
-    <WorkflowPartId>{5203f640-174f-48b5-b003-1f2d2ce3342d}</WorkflowPartId>
-    <CspkgPartId>{6d5506db-b2db-4ea0-91ee-f1fb60b290c5}</CspkgPartId>
-    <SqlPackagePartId>{5198065d-e88e-412a-8e74-9d642b7ed99c}</SqlPackagePartId>
+    <AppFeaturePartId>{ad95d3d8-3c19-476a-89e5-ce09c4d68b34}</AppFeaturePartId>
+    <WspPartId>{af42b684-f447-4b65-a9ad-e145188a8330}</WspPartId>
+    <WorkflowPartId>{bec59db4-7009-4686-af21-e4445c9d268b}</WorkflowPartId>
+    <CspkgPartId>{b790c0e5-b22b-480d-941f-7af8d6a603a5}</CspkgPartId>
+    <SqlPackagePartId>{8c83cab3-2231-4d63-82ea-bc2f65b478cf}</SqlPackagePartId>
     <ProjectMode>OfficeApp</ProjectMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,21 +41,22 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="GeekQuizStatisticsManifest\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{57b18513-5518-4c88-9c2e-5b1501f9fcb9}</SharePointProjectItemId>
+    <None Include="GeekQuiz.OfficeManifest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{26cd430e-3758-4fb8-a879-d3e87ebac0c8}</SharePointProjectItemId>
     </None>
-    <Content Include="GeekQuizStatisticsManifest\GeekQuizStatistics.xml">
+    <Content Include="GeekQuiz.OfficeManifest\GeekQuiz.Office.xml">
       <OpcRelationship>manifest-oemanifest</OpcRelationship>
     </Content>
+    <None Include="StatisticsDev.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GeekQuizStatisticsWeb\GeekQuizStatisticsWeb.csproj">
-      <Project>{F7B79C09-C970-455A-99C8-F8B8CE7647DF}</Project>
-      <Name>GeekQuizStatisticsWeb</Name>
+    <ProjectReference Include="..\GeekQuiz\GeekQuiz.csproj">
+      <Project>{97C2F2F6-0E6A-4717-BE70-722245DA076F}</Project>
+      <Name>GeekQuiz</Name>
       <Private>True</Private>
       <RoleType>Web</RoleType>
       <OutputItemType>SharePointWebProjectOutput</OutputItemType>
-      <RoleName>GeekQuizStatisticsWeb</RoleName>
+      <RoleName>GeekQuiz</RoleName>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

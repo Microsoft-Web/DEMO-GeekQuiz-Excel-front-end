@@ -19,6 +19,10 @@ namespace GeekQuiz
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/officeapp").Include(
+                        "~/Scripts/Office/MicrosoftAjax.js",
+                        "~/Scripts/Office/1.0/office.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
@@ -27,6 +31,10 @@ namespace GeekQuiz
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/flip.css"));
+
+            bundles.Add(new StyleBundle("~/Content/officeappstyles").Include(
+                      "~/Content/Office.css",
+                      "~/Content/OfficeApp.css"));
         }
     }
 }
