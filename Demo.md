@@ -31,20 +31,25 @@ Follow these steps to setup your environment for the demo.
 
 1. Open Visual Studio 2013.
 1. Open the **GeekQuiz.sln** solution located under **source\end**.
-1. If you don't have one, create a user account for the application. To do that, press **F5**, click **Register** and provide the information required. After that, close the browser window.
+1. Press **F5** to start the application.
+1. If you don't have one, create a user account for the application. To do that, click **Register** and provide the information required.
 
-	> **Note:** Remember the information you provided as you will be using it during the demo.
+	> **Note:** Remember the information you provided as you will use it during the demo.
 
-1. Answers a few questions.
-1. Make sure that the **GeekQuiz Website** project has the **Current Page** configured as **Start Action**. To do this, open the project properties and open the Web tab.
+1. Answer a few questions and then close the browser window.
+1. Make sure that the **GeekQuiz Website** project has **Current Page** configured as the **Start Action**. To do this, open the project properties, open the Web tab and select the **Current Page** option.
 
 	![Configuring the start action for the web site](images/configuring-the-start-action-of-the-website.png?raw=true "Configuring the start action for the web site")
 
 	_Configuring the start action for the web site_
- 
+
+1. Save the settings.
+1. Click the **GeekQuiz.Office** project, open the properties window and set the **Start Action** to **StatisticsDev.xlsx**.
+
+	![Start Action](Images/start-action.png?raw=true)
+
 1. In Visual Studio, close all open files.
-1. Make sure that you have an Internet connection, as requires the download of NuGet packages.
-1. Make sure that you have **Microsoft Excel 2013** installed.
+1. Install **Microsoft Excel 2013** (if it is not already installed).
 
 <a name="Demo" />
 ## Demo ##
@@ -75,7 +80,7 @@ This demo is composed of the following segments:
 	}
 ````
 
-1. In the same folder open the **OfficeAppController** file and show that the **Index** action returns a view.
+1. Open the **OfficeAppController** file (located in the **Controllers** folder) and show that the **Index** action returns a view.
 
 	<!-- mark:5-8 -->
 	````C#
@@ -88,17 +93,17 @@ This demo is composed of the following segments:
 			return View();
 		}
 	}
-````
+	````
 
-1. Open the **GeekQuiz.OfficeManifest** located in the **GeekQuiz.Office** project and show that the **Source location** is defined as **GeekQuiz/OfficeApp/**.
+1. Double-click the **GeekQuiz.OfficeManifest** file, located in the **GeekQuiz.Office** project and show that the **Source location** is defined as **GeekQuiz/OfficeApp/**.
 
 	![Showing the Office Manifest](images/showing-the-office-manifest.png?raw=true "Showing the Office Manifest")
 
 	_Showing the Office Manifest_
 
-1. Go back to the **GeekQuiz** project and open the **Index.cshtml** file located in the **Views/OfficeApp** folder.
+1. Back in the **GeekQuiz** project, open the **Index.cshtml** file located in the **Views/OfficeApp** folder.
 
-1. Show button in that page
+1. Highlight the `<button>` element that is shown in the following snippet.
 
 	````HTML
 	<button id="update-statistics" disabled >Update Statistics</button>
@@ -112,9 +117,9 @@ This demo is composed of the following segments:
 	}
 	````
 
-1. Open the **OfficeApp.js** file located in the **Scripts** folder
+1. Open the **OfficeApp.js** file located in the **Scripts** folder.
 
-1. Show the **Office.initialize** statement.
+1. Show the `Office.initialize` callback assignment.
 
 	````JavaScript
 	// The initialize function must be run each time a new page is loaded
@@ -125,9 +130,9 @@ This demo is composed of the following segments:
             initializeBindings();
         });
     };
-````
+	````
 
-1. Show the **initializeBindings** function
+1. Show the **initializeBindings** function.
 
 	````JavaScript
 	function initializeBindings() {
@@ -141,9 +146,9 @@ This demo is composed of the following segments:
               }
           });
     }
-````
+	````
 
-1. Finally, show the **updateStatisticsTable** function
+1. Show the **updateStatisticsTable** function.
 
 	````JavaScript
 	function updateStatisticsTable() {
@@ -156,12 +161,12 @@ This demo is composed of the following segments:
             Office.select("bindings#" + bindingID).setDataAsync(newValuesTable, { coercionType: Office.CoercionType.Table });
         });
     }
-````
+	````
 
 <a name="segment2" />
 ### Running the solution ###
 
-1. Debug the application with **F5**.
+1. Start running the application by pressing **CTRL + F5**.
 
 	![Running the solution](images/running-the-solution.png?raw=true "Running the solution")
 	
@@ -173,17 +178,19 @@ This demo is composed of the following segments:
 	
 	_Showing the app for office_
 
-1. Navigate to the **DESIGN** tab and show that the **Table Name** is **StatisticsTable**.
+1. Select to the **DESIGN** tab and show that the **Table Name** is **StatisticsTable**.
 
 	![Showing the table name](images/showing-the-table-name.png?raw=true "Showing the table name")
 	
 	_Showing the table name_
 
-1. Click the **Update Statistics** button.
+1. Click **Update Statistics**.
 
 	![Updating the statistics](images/updating-the-statistics.png?raw=true "Updating the statistics")
 	
 	_Updating the statistics_
+
+	> **Note:** It takes some time for the excel file to be updated the first time the button is clicked.
 
 1. Show the new data in the statistics table.
 
@@ -191,15 +198,15 @@ This demo is composed of the following segments:
 	
 	_Showing the updated statistics_
 
-1. Switch to the **GeekQuiz** Web site.
+1. Switch to the **GeekQuiz** web site, which was opened in a web browser when you pressed **CTRL + F5**.
 
 	> **Note:** If the Log in page is displayed, provide the credentials you created during the setup steps.
 	
 	> ![Logging in the site](images/logging-in-the-app.png?raw=true "Logging in the site")	
 
-1. Answers a few questions.
+1. Answer a few questions.
 
-1. Go back to **Excel** and click the **update statistics** button one more time.
+1. Go back to **Excel** and click **Update statistics** again.
 
 1. Show that the data has changed again with the latest answers.
 
