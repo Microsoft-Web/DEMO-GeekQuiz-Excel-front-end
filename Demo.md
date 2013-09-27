@@ -46,7 +46,7 @@ Follow these steps to setup your environment for the demo.
 1. Save the settings.
 1. Click the **GeekQuiz.Office** project, open the properties window and set the **Start Action** to **StatisticsDev.xlsx**.
 
-	![Start Action](Images/start-action.png?raw=true)
+	![Start Action](images/start-action.png?raw=true)
 
 1. In Visual Studio, close all open files.
 1. Install **Microsoft Excel 2013** (if it is not already installed).
