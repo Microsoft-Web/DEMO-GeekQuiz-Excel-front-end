@@ -5,25 +5,26 @@
 <a name="Overview" />
 ## Overview ##
 
-This demo demonstrates an Excel app pulls statistics from the GeekQuiz API. 
+This demo demonstrates how an Excel app can pull statistics from GeekQuiz through Web API.
 
 <a id="goals" />
 ### Goals ###
 In this demo, you will see how to:
 
-1. (TODO: Insert goal 1 here)
-1. (TODO: Insert goal 2 here)
-1. (TODO: Insert goal 3 here)
+1. Expose statistics through Web API
+1. Invoke a Web API from an Excel app
+1. Display data in a worksheet containing graphs
 
 <a name="technologies" />
 ### Key Technologies ###
 
-- {TODO: Include technology name here} [here][1]
-- {TODO: Include technology name here}
-- [{TODO: Include technology name here}][2]
+- [Apps for Office (Excel)][1]
+- [Excel][3]
+- [ASP.NET Web API][2]
 
-[1]: http://insert_link_to_technology_1_here/
-[2]: http://insert_link_to_technology_2_here/
+[1]: http://msdn.microsoft.com/library/office/apps/jj220082(v=office.15)
+[2]: http://office.microsoft.com/en-us/excel/
+[3]: http://www.asp.net/web-api
 
 <a name="Setup" />
 ### Setup and Configuration ###
@@ -222,11 +223,6 @@ This demo is composed of the following segments:
 <a name="summary" />
 ## Summary ##
 
-(TODO: Insert a summary text here. For example:)  
-By completing this demo lab you have learned how to:
-
- * (TODO: Insert outcome 1 here)
- * (TODO: Insert outcome 2 here)
- * (TODO: Insert outcome 3 here)
+By completing this demo you should have walked through the code required for pulling data from GeekQuiz Web API from an Excel App
 
 ---
